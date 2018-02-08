@@ -7,7 +7,7 @@
 #
 
 #
-# The line below states we will base our new image on the Latest Official Ubuntu 
+# The line below states we will base our new image on the Latest Official Ubuntu
 FROM ubuntu:17.10
 
 #
@@ -23,3 +23,4 @@ RUN cd ~/uc-ghost/bncsutil/src/bncsutil && make && make install
 RUN cd ~/uc-ghost/StormLib/stormlib/ && make && make install
 RUN ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.so /usr/lib/x86_64-linux-gnu/libmysqlclient_r.so
 RUN cd ~/uc-ghost/ghost/ && make
+CMD [ "/root/uc-ghost/ghost/ghost++"]
